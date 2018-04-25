@@ -1,15 +1,16 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
 
-import logo from '../images/logo.jpg';
+import logo from '../images/logo.png';
+
+const HeaderWrapper = styled.div`
+  background: rebeccapurple,
+  margin-bottom: 1.45rem
+`
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+  <div>
     <div
       style={{
         margin: '0 auto',
@@ -25,7 +26,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <img src={logo} alt="Blog"/>
         </Link>
       </h1>
     </div>
